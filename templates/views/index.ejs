@@ -44,23 +44,16 @@
             fetch('https://countriesnow.space/api/v0.1/countries/population/cities').then((resp) => {
                 return resp.json();
             }).then((data) => {
-                // console.log(data.data[0].country);
                 data1 = data.data
             })
         }
         getData();
 
         function change(res) {
-            // let del = document.getElementsByClassName("my-class");
             select = document.getElementById('selt');
-            console.log(res);
-            // select.removeChild(select.childNodes);
-            // console.log(del);
             let city = [];
             for (let i = 0; i < data1.length; i++) {
-                // console.log("0");
                 if (data1[i].country === res) {
-                    console.log(data1[i].city);
                     city.push(data1[i].city);
 
                 }
@@ -72,11 +65,7 @@
                 select.appendChild(opt);
             } else if (city[0] == undefined) {
                 alert("No City Found");
-            }
-
-            // var min = 12,
-            //     max = 100,
-            else {
+            } else {
                 for (var i = 0; i < city.length; i++) {
                     var opt = document.createElement('option');
                     opt.classList.add("my-class");

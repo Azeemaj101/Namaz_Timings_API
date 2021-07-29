@@ -15,7 +15,6 @@ app.set("views", temp_path);
 
 app.get("/", (req, res) => {
     let country = "";
-    let city = "";
     request(`https://restcountries.eu/rest/v2/`, (err, resp) => {
         if (err) {
             res.status(404).render('404', {
@@ -23,7 +22,6 @@ app.get("/", (req, res) => {
             });
         } else {
             let API_Country = JSON.parse(resp.body);
-            // let API_City = [API_Ciy];
             country = API_Country;
         }
         res.render("index", {
@@ -57,12 +55,13 @@ app.post('/', (req, res) => {
         }
         today = dd + '-' + mm + '-' + yyyy;
         request(`https://api.aladhan.com/v1/calendarByCity?city=${city}&country=${country}&method=2&month=${date.getMonth}&year=${date.getFullYear}`, (err, resp) => {
-            if (err) {
-                res.status(500).render('500', {
+            let v = JSON.parse(resp.body);
+            if (err || v.code == 400) {
+                res.status(500).render('404', {
                     err: "Server Error"
                 });
             } else {
-                let v = JSON.parse(resp.body);
+                // let v = JSON.parse(resp.body);
                 res.render('namaz_page', {
                     city2: city,
                     city1: `${city}, ${country}`,

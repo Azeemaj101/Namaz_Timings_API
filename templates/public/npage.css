@@ -1,0 +1,122 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+body {
+    /* background-color: black; */
+    background-image: url("2.jpg");
+    /* The image used */
+    /* background-color: #cccccc; */
+    /* Used if the image is unavailable */
+    height: 100vh;
+    /* You must set a specified height */
+    /* background-position: center; */
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    background-attachment: fixed;
+    /* Resize the background image to cover the entire container */
+    backdrop-filter: blur(2px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.head {
+    margin-top: 15px;
+    padding: 10px;
+    text-shadow: 2px 2px 5px white;
+    background: rgb(251, 232, 63);
+    background: radial-gradient(circle, rgba(251, 232, 63, 0.43040966386554624) 0%, rgba(219, 252, 70, 0.427608543417367) 100%);
+    backdrop-filter: blur(10px);
+    border-left: 7px solid gray;
+    border-right: 7px solid gray;
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.weather {
+    animation: zoominoutsinglefeatured 5s infinite;
+}
+
+.box1 {
+    /* width: 100px; */
+    min-height: 50px;
+    max-height: 150px;
+}
+
+.tabs {
+    backdrop-filter: blur(20px);
+    text-shadow: 2px 2px 5px white;
+    background: rgb(251, 232, 63);
+    background: radial-gradient(circle, rgba(251, 232, 63, 0.43040966386554624) 0%, rgba(219, 252, 70, 0.427608543417367) 100%);
+    border-radius: 23px;
+}
+
+.tabs1 {
+    background: rgb(251, 232, 63);
+    background: radial-gradient(circle, rgba(251, 232, 63, 0.43040966386554624) 0%, rgba(219, 252, 70, 0.427608543417367) 100%);
+}
+
+main {
+    /* background: rgb(207, 251, 63);
+    background: radial-gradient(circle, rgba(207, 251, 63, 0.2847514005602241) 0%, rgba(155, 252, 70, 0.2847514005602241) 100%); */
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.35477941176470584) 0%, rgba(255, 255, 255, 0.3211659663865546) 100%);
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.card1 {
+    background: rgb(217, 217, 217);
+    background: linear-gradient(90deg, rgba(217, 217, 217, 0.335171568627451) 0%, rgba(141, 253, 29, 0.31556372549019607) 50%, rgba(217, 217, 217, 0.36318277310924374) 100%);
+    text-shadow: 2px 2px 5px white;
+}
+
+footer {
+    background: rgb(6, 6, 6);
+    background: linear-gradient(0deg, rgba(6, 6, 6, 0.3267682072829131) 0%, rgba(6, 6, 6, 0.33237044817927175) 100%);
+    border-top: 1px solid black;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.full {
+    text-shadow: white;
+}

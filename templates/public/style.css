@@ -1,0 +1,83 @@
+body {
+    /* background-color: black; */
+    background-image: url("1.jpg");
+    /* The image used */
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+    height: 100vh;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+.main1 {
+    height: 100%;
+    width: 100%;
+    /* margin-top: 200px; */
+}
+
+.sel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sel select {
+    margin-top: 15px;
+    background: transparent;
+    backdrop-filter: filter(10px);
+}
+
+.sel div {
+    margin-top: 15px;
+    width: 100px;
+    display: flex;
+    align-self: center;
+}
+
+.card1 {
+    background-color: transparent;
+    background: rgb(63, 251, 228);
+    background: radial-gradient(circle, rgba(63, 251, 228, 0.5116421568627452) 0%, rgba(70, 252, 99, 0.6348914565826331) 100%);
+    backdrop-filter: blur(2px);
+}
+
+.img {
+    width: 120px;
+    height: 120px;
+}
+
+.sel select option {
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

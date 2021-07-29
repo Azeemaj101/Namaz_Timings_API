@@ -124,8 +124,12 @@ footer {
     text-shadow: white;
 }
 
-ion-icon {
+.icon {
     font-size: 25px;
+}
+
+.icon1 {
+    font-size: 15px;
 }
 
 a {

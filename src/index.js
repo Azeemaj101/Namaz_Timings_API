@@ -61,12 +61,14 @@ app.post('/', (req, res) => {
                     err: "Server Error"
                 });
             } else {
-                // let v = JSON.parse(resp.body);
+                var time = date.toLocaleString('en-US', {
+                    timeZone: v.data[0].meta.timezone
+                });
                 res.render('namaz_page', {
                     city2: city,
                     city1: `${city}, ${country}`,
                     obj: v,
-                    date1: today,
+                    date1: time.split(",")[0].split("/")[1],
                     year: yyyy
                 });
             }

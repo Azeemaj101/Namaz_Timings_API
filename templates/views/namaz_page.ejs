@@ -256,7 +256,7 @@
                     }(),
                     dayOfMonth = today + (objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
                     months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'),
-                    curMonth = months[arr[0].split("/")[0]];
+                    curMonth = months[arr[0].split("/")[0] - 1];
                 var today = `${dayOfWeek} | ${curMonth} ${dayOfMonth} | ${unicode} ${arr[1].split(" ")[1].split(":")[0]}:${arr[1].split(" ")[1].split(":")[1]}:${arr[1].split(" ")[1].split(":")[2]} ${arr[1].split(" ")[2]}`;
                 // document.write(today);
                 document.getElementById("Date").innerHTML = today;

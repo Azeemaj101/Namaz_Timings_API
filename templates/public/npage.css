@@ -26,7 +26,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 6px;
 }
 
 
@@ -49,7 +49,7 @@ body {
  ::-webkit-scrollbar-thumb:hover {
     background: rgb(251, 232, 63);
     background: radial-gradient(circle, rgba(251, 232, 63, 0.43040966386554624) 0%, rgba(219, 252, 70, 0.427608543417367) 100%);
-    width: 5px;
+    width: 8px;
 }
 
 .head {

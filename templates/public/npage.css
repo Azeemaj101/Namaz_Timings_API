@@ -29,11 +29,16 @@ body {
     width: 5px;
 }
 
+::-webkit-scrollbar:hover {
+    width: 8px;
+}
+
 
 /* Track */
 
  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    /* background: transparent; */
+    background-color: rgba(211, 85, 85, 0.199);
 }
 
 
@@ -41,15 +46,15 @@ body {
 
  ::-webkit-scrollbar-thumb {
     background: #888;
+    border-radius: 20px;
+    border: 1px dotted rgb(4, 0, 255);
 }
 
 
 /* Handle on hover */
 
  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
-    background: radial-gradient(circle, rgba(251, 232, 63, 0.43040966386554624) 0%, rgba(219, 252, 70, 0.427608543417367) 100%);
-    width: 8px;
+    background: chartreuse
 }
 
 .head {

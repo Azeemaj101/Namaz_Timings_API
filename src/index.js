@@ -64,11 +64,16 @@ app.post('/', (req, res) => {
                 var time = date.toLocaleString('en-US', {
                     timeZone: v.data[0].meta.timezone
                 });
+                var da = time.split(",")[0].split("/")[1];
+                if (da < 10) {
+                    da = '0' + da;
+                }
+                console.log(da);
                 res.render('namaz_page', {
                     city2: city,
                     city1: `${city}, ${country}`,
                     obj: v,
-                    date1: time.split(",")[0].split("/")[1],
+                    date1: da,
                     year: yyyy
                 });
             }

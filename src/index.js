@@ -68,7 +68,6 @@ app.post('/', (req, res) => {
                 if (da < 10) {
                     da = '0' + da;
                 }
-                console.log(da);
                 res.render('namaz_page', {
                     city2: city,
                     city1: `${city}, ${country}`,

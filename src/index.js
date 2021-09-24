@@ -15,7 +15,7 @@ app.set("views", temp_path);
 
 app.get("/", (req, res) => {
     let country = "";
-    request(`https://restcountries.eu/rest/v2/`, (err, resp) => {
+    request(`https://corona.lmao.ninja/v2/countries`, (err, resp) => {
         if (err) {
             res.status(404).render('404', {
                 err: "Server Error"

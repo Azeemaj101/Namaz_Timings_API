@@ -23,8 +23,8 @@
                 <select name="country" onchange="change(this.value)" placeholder="Select Country" class="form-select rounded-pill" aria-label="Default select example">
                     <option value="NO">Select your country</option>
                     <% for(let i=0; i<country1.length; i++) {%>
-                        <option value= "<%- country1[i].name %>">
-                            <%= country1[i].name %>
+                        <option value= "<%- country1[i].country %>">
+                            <%= country1[i].country %>
                         </option>
                         <% } %>
                   </select><select name="city" class="form-select rounded-pill" id="selt" aria-label="Default select example">

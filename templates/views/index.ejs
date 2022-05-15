@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="mosque.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Namaz-Time</title>
 </head>
 
@@ -54,12 +55,16 @@
             let city = [];
             for (let i = 0; i < data1.length; i++) {
                 if (data1[i].country === res) {
+                    $("#selt").empty();
+                    $("#selt").prepend("<option value='No'>Select your city</option>");
                     city.push(data1[i].city);
 
                 }
             }
             if (res === "Afghanistan") {
                 var opt = document.createElement('option');
+                $("#selt").empty();
+                $("#selt").prepend("<option value='No'>Select your city</option>");
                 opt.classList.add("my-class");
                 opt.innerHTML = "Kabul";
                 select.appendChild(opt);
